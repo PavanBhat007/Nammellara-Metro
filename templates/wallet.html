@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    WALLET
+{% endblock %}
+
+{% block main %}
+    <div class="wallet-container">
+        <table class="wallet">
+            <thead>
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for travel in travels %}
+                    <tr>
+                        <td>{{ travel["date"] }}</td>
+                        <td>{{ travel["amount"] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <h3>Cash remaining: {{ cash }}</h3>
+    </div>
+{% endblock %}

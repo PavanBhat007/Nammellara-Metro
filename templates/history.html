@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    HISTORY
+{% endblock %}
+
+{% block main %}
+    <div class="history-container">
+        <table class="history">
+            <thead>
+                <tr>
+                    <th scope="col">Source</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in person %}
+                    <tr>
+                        <td>{{row['source']}}</td>
+                        <td>{{row['dest']}}</td>
+                        <td>{{row['date']}}</td>
+                        <td>{{row['amount']}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <h3>Cash remaining: {{ cash }}</h3>
+    </div>
+{% endblock %}

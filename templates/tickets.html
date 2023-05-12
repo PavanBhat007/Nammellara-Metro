@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    BOOK TICKETS
+{% endblock %}
+
+{% block main %}
+    <div class="ticket-container">
+        <form action="/book" method="post">
+            <div class="ticket">
+                <label for="username">Source</label><br>
+                <Select name="source">
+                    <option selected disabled value="source">Station 1</option>
+                    {% for s in q %}
+                        <option>{{ s }}</option>
+                    {% endfor %}
+                </Select>
+                <br>
+                <label for="username">Destination</label><br>
+                <Select name="destination">
+                    <option selected disabled value="source">Station 1</option>
+                    {% for s in q %}
+                        <option>{{ s }}</option>
+                    {% endfor %}
+                </Select>
+            </div>
+            <button class="submit-button" type="submit">Submit</button>
+        </form>
+        <h3>Ticket booked for {{ price }}</h3>
+    </div>
+{% endblock %}

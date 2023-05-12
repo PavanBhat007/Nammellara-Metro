@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    HOME
+{% endblock %}
+
+{% block main %}
+    <div class="profile-container">
+        <div class="profile">
+            <div class="profile-pic">
+                <img src="static\profile-img.png">
+            </div>
+            <div class="details">
+                <h1>Name: {{ name }}</h1>
+                <h3>Age: {{ age }}</h3>
+                <h3>Gender: {{ gender }}</h3>
+                <h2>Credits/ Cash: {{ credits }}</h2>
+                <h3>Last ride: {{ last_ride }}</h3>
+                <h3>Last ride fare: {{ amount }}</h3>
+                <h3>Last ride on: {{ date }}</h3>
+                <h3>Pass type: None</h3>
+            </div>
+        </div>
+    </div>
+{% endblock %}

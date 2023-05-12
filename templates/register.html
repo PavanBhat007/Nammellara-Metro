@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <div class="register">
+        <div class="box">
+            <form action="/register" method="post">
+                <div class="text-field">
+                    <label for="username">Name</label><br>
+                    <input required autocomplete="off" autofocus name="username" placeholder="Username" type="text">
+                </div>
+                <label>Age</label>
+                <div class="selector">
+                    <input required type="number" id="age" name="age" min="0" max="100" step="1" value="18">
+                </div>
+                <br>
+                <div class="radio-button">
+                    <label for="gender">Gender</label><br>
+                    <input required type="radio" id="gender" name="gender" value="male"/> Male
+                    <br>
+                    <input required type="radio" id="gender" name="gender" value="female"/> Female <br/>
+                </div>
+                <br>
+                <div class="text-field">
+                    <label for="password">Password</label><br>
+                    <input required name="password" placeholder="Password" type="password">
+                </div>
+                <br>
+                 <div class="text-field">
+                     <label for="confirmation">Confirm Password</label><br>
+                    <input required name="confirmation" placeholder="Confirm Password" type="password">
+                </div>
+                <button class="submit-button" type="submit">Join Nammellara Metro now</button>
+            </form>
+        </div>
+
+        <img src="/static/metro-img.jpg">
+    </div>
+
+
+{% endblock %}
