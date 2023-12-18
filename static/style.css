@@ -1,8 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen+Mono&family=Oxygen:wght@400;700&family=Rubik+Broken+Fax&display=swap');
+
+.rubik {
+    font-family: "Rubik Broken Fax";
+    font-weight: normal;
+    font-size: 60px;
+}
+
 .profile-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-transform: capitalize;
 }
+
+.profile {
+    background: linear-gradient(45deg, lightpink, lightskyblue, cyan);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    color: black;
+    box-shadow: 0 0 10000px lightskyblue;
+}
+
 
 .profile-container .profile-pic img {
     margin-right: 30px;
@@ -48,7 +66,7 @@ label {
     color: black;
 }
 
-.register {
+/* .register {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -63,7 +81,7 @@ label {
     background: linear-gradient(45deg, purple, lightpink, lightskyblue, cyan);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-}
+} */
 
 @keyframes gradient {
 	0% {
@@ -96,24 +114,41 @@ input {
     margin: 10px 10px;
 }
 
-.login {
+.login, .register {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    width: 90%;
 }
 
-.login img {
+.login img,
+.register img,
+.apology img {
     display: flex;
-    flex-grow: 1;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 30px;
+    border: 3px solid black;
 }
 
-.login .box {
-    background: linear-gradient(45deg, purple, lightpink, lightskyblue, cyan);
+.login .box,
+.register .box,
+.history, .history-container h2,
+.wallet, .wallet-container h2,
+.apology {
+    background: linear-gradient(45deg, lightpink, lightskyblue, cyan);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
+    box-shadow: 0 0 10000px lightskyblue;
+    color: black;
+    margin: 0 auto;
 }
 
-.about {
+.register {
+    margin-left: 100px;
+}
+
+/* .about {
     display: flex;
     justify-content: space-between;
 }
@@ -179,7 +214,7 @@ input {
 .about .singles .card .container p {
     font-weight: 600;
     font-size: 20px;
-}
+} */
 
 .profile-container .profile {
     display: flex;
@@ -197,105 +232,112 @@ input {
     letter-spacing: 2px;
 }
 
-.history-container .history {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-}
-
-
-.history-container .history thead tr th {
-    text-transform: uppercase;
-    font-weight: 800;
-    padding: 10px 20px;
-    font-size: 30px;
-    border: 3px solid black;
-    background: white;
-}
-
-.history-container .history tbody tr td {
-    font-weight: 600;
-    padding: 10px 20px;
-    font-size: 20px;
-}
-.history-container .history tr {
-    background: white;
-    border: 3px solid black;
-}
-
-.history-container h3 {
-    font-weight: 800;
-    font-size: 30px;
-    text-align: right;
-    margin-bottom: 350px;
-    margin-right: 720px;
-}
-
+.history-container .history,
 .wallet-container .wallet {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     margin-top: 50px;
+    border-radius: 30px;
+    border: 3px solid black;
+    padding: 20px 20px;
 }
 
+
+.history-container .history thead tr th,
 .wallet-container .wallet thead tr th {
     text-transform: uppercase;
     font-weight: 800;
     padding: 10px 20px;
     font-size: 30px;
     border: 3px solid black;
-    background: white;
+    border-radius: 30px;
 }
 
+.history-container h2,
+.wallet-container h2 {
+    border: 3px solid black;
+    border-radius: 30px;
+    width: 30%;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.history-container .history tbody tr td,
 .wallet-container .wallet tbody tr td {
     font-weight: 600;
     padding: 10px 20px;
     font-size: 20px;
-}
-.wallet-container .wallet tr {
-    background: white;
-    border: 3px solid black;
-}
-
-.wallet-container h3 {
-    font-weight: 800;
-    font-size: 30px;
-    text-align: right;
-    margin-bottom: 400px;
     text-align: center;
 }
 
-.ticket-container {
-    margin: 30px 30px;
-    padding: 20px 10px;
-    width: 50%;
-    height: 100%;
-    margin-bottom: 320px;
-    display: flex;
-    flex-grow: 1;
-    justify-content: space-between;
+.history-container .history tr,
+.wallet-container .wallet tr {
+    border: 3px solid black;
 }
 
-.ticket-container .ticket label{
+
+.ticket-container,
+.pass-container,
+.apology {
+    margin: 50px auto;
+    padding: 20px 10px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(180deg, lightpink, lightskyblue, cyan);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    box-shadow: 0 0 100px lightskyblue;
+    border: 3px solid black;
+    border-radius: 30px;
+    color: black;
+    text-align: center;
+}
+
+.ticket {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.ticket-container .ticket label,
+.pass-container label{
     font-size: 30px;
     font-weight: 600;
     letter-spacing: 2px;
     padding-left: 20px;
 }
 
-.ticket-container .ticket select {
+
+.ticket-container .ticket .dst select,
+.ticket-container .ticket .src select {
     font-size: 15px;
     padding: 10px 20px;
     margin: 10px 10px;
     border-radius: 20px;
     border: 2px solid black;
+    padding: 10px;
+    margin: -5px -20px -5px -5px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
+
+.ticket-container .ticket .src select::-webkit-scrollbar,
+.ticket-container .ticket .dst select::-webkit-scrollbar {
+    display: none;
+}
+
 
 .ticket-container .ticket select option{
     font-size: 15px;
+    background-color: lightskyblue;
+    color: black;
+    font-weight: 600;
 }
 
-.ticket-container {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
+.pass-container {
+    width: 50%;
+    font-size: 20px;
 }

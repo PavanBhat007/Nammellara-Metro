@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block main %}
+    <h1 class="rubik"> TRAVEL HISTORY </h1>
     <div class="history-container">
         <table class="history">
             <thead>
@@ -16,7 +17,7 @@
                 </tr>
             </thead>
             <tbody>
-                {% for row in person %}
+                {% for row in travels %}
                     <tr>
                         <td>{{row['source']}}</td>
                         <td>{{row['dest']}}</td>
@@ -26,6 +27,6 @@
                 {% endfor %}
             </tbody>
         </table>
-        <h3>Cash remaining: {{ cash }}</h3>
+        <h2>Cash remaining: {{ cash }}</h3>
     </div>
 {% endblock %}

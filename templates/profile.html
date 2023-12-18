@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block main %}
+    <h1 class="rubik"> MY PROFILE </h1>
     <div class="profile-container">
         <div class="profile">
             <div class="profile-pic">
@@ -18,7 +19,7 @@
                 <h3>Last ride: {{ last_ride }}</h3>
                 <h3>Last ride fare: {{ amount }}</h3>
                 <h3>Last ride on: {{ date }}</h3>
-                <h3>Pass type: None</h3>
+                <h3>Pass type: {{ pass_type }}</h3>
             </div>
         </div>
     </div>

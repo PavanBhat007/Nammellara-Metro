@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    BOOK PASS
+{% endblock %}
+
+{% block main %}
+    <h1 class="rubik"> BUY PASS </h1>
+    <div class="pass-container">
+        <form action="/pass" method="post">
+            <div class="radio-button">
+                <label for="gender">Pass type</label><br>
+                <input required type="radio" id="pass" name="pass" value="general"/> General Pass - Rs. 100 for 10% discount <br/>
+                <input required type="radio" id="pass" name="pass" value="executive"/> Executive Pass - Rs. 300 for 30% discount<br/>
+            </div>
+            <button class="submit-button" type="submit">Submit</button>
+        </form>
+        Note : Passes are valid for one day only
+    </div>
+{% endblock %}

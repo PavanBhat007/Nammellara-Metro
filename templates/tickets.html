@@ -5,27 +5,31 @@
 {% endblock %}
 
 {% block main %}
+    <h1 class="rubik"> BUY TICKET </h1>
     <div class="ticket-container">
         <form action="/book" method="post">
             <div class="ticket">
-                <label for="username">Source</label><br>
-                <Select name="source">
-                    <option selected disabled value="source">Station 1</option>
-                    {% for s in q %}
-                        <option>{{ s }}</option>
-                    {% endfor %}
-                </Select>
-                <br>
-                <label for="username">Destination</label><br>
-                <Select name="destination">
-                    <option selected disabled value="source">Station 1</option>
-                    {% for s in q %}
-                        <option>{{ s }}</option>
-                    {% endfor %}
-                </Select>
+                <div class="src">
+                    <label for="username">Source</label><br>
+                    <select name="source">
+                        <option selected disabled value="source">Station 1</option>
+                        {% for s in q %}
+                            <option>{{ s }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="dst">
+                    <label for="username">Destination</label><br>
+                    <select name="destination">
+                        <option selected disabled value="source">Station 1</option>
+                        {% for s in q %}
+                            <option>{{ s }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <button class="submit-button" type="submit">Submit</button>
             </div>
-            <button class="submit-button" type="submit">Submit</button>
         </form>
-        <h3>Ticket booked for {{ price }}</h3>
+        <h2> Buy a Pass for discounts on all tickets </a></h2>
     </div>
 {% endblock %}

@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block main %}
+    <h1 class="rubik"> WALLET </h1>
     <div class="wallet-container">
         <table class="wallet">
             <thead>
@@ -20,8 +21,19 @@
                         <td>{{ travel["amount"] }}</td>
                     </tr>
                 {% endfor %}
+                {% if pass_type == "general" %}
+                    <tr>
+                        <td> GENERAL PASS </td>
+                        <td> 100 </td>
+                    </tr>
+                {% elif pass_type == "executive" %}
+                    <tr>
+                        <td> EXECUTIVE PASS </td>
+                        <td> 300 </td>
+                    </tr>
+                {% endif %}
             </tbody>
         </table>
-        <h3>Cash remaining: {{ cash }}</h3>
+        <h2>Cash remaining: {{ cash }}</h2>
     </div>
 {% endblock %}
